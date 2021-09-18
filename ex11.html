@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.css">
+</head>
+<style>
+    .select-editable select:focus,
+    .select-editable input:focus {
+        outline: none;
+    }
+    
+    .select-editable {
+        position: relative;
+        background-color: white;
+        border: solid grey 1px;
+        width: 120px;
+        height: 18px;
+    }
+    
+    .select-editable select {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        font-size: 14px;
+        border: none;
+        width: 120px;
+        margin: 0;
+    }
+    
+    .select-editable input {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100px;
+        padding: 1px;
+        font-size: 12px;
+        border: none;
+    }
+    
+    #im:hover {
+        transform: scale(1.2);
+    }
+</style>
+
+<body>
+    <div class="container justify-content-center mt-5 border " style="height:100%; box-shadow: 3px 3px 3px 5px grey">
+        <div class="display-3 text-center">Event 1</div>
+        <p class="text-center display-5 form-label" style="font-size: 18pt;">No of seats available 23</p>
+        <div style="height:75%;box-shadow: 3px 3px 3px grey" class="container justify-content-center mt-2 mb-2 border">
+            <div class="row justify-content-center mt-4 ">
+                <div class="col-5 mt-5 justify-content-center">
+                    <img id="im" height="70%;" src="https://th.bing.com/th/id/OIP.jwm7cIsHjTtuRK07R_XlSwHaEx?w=251&h=180&c=7&r=0&o=5&pid=1.7" alt="">
+                </div>
+                <div class="col-4">
+                    <label for="n" class="form-label">Name:</label>
+                    <input type="text" class="form-control" placeholder="enter name">
+                    <label for="n" class="form-label">Email:</label>
+                    <input type="email" class="form-control" placeholder="enter email">
+                    <label for="n" class="form-label">Phn No:</label>
+                    <input type="number" class="form-control" placeholder="enter Phn No">
+                    <label for="n" class="form-label">No of Seats:</label>
+                    <div class="select-editable">
+                        <select id="number" class="form-control" onchange="this.nextElementSibling.value=this.value">
+                            <option value=""></option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                                 </select>
+                        <input type="text" name="format" value="" />
+                    </div> <br>
+                    <label for="l" class="form-label" id="attendees"></label>
+                    <textarea class="form-control" name="a" id="a" cols="30" rows="2">enter all attendees names</textarea>
+                    <div class="row justify-content-center mt-4">
+                        <div class="col-4">
+                            <input type="submit" value="Submit" class="form-control bg-success text-white">
+                        </div>
+                        <div class="col-4">
+                            <input type="submit" value="Cancel" class="form-control bg-danger text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script2.js"></script>
+
+</html>
